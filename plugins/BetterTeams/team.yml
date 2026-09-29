@@ -1,0 +1,7 @@
+cooldowns:
+  - 'home:10'
+  - 'warp:10'
+
+costs: []
+
+costFromTeam: true

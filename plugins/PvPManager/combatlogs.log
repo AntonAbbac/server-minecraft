@@ -1,0 +1,6 @@
+This file logs every player that disconnected during combat
+You can disable the logging in the config file
+
+[2026/09/22 16:10:39] nesfety tried to escape combat! (4.350s left) | In combat with: [.Monster87275455] | World:world, X:-1.70, Y:118.00, Z:0.38
+[2026/09/22 17:51:27] .CreeperVR_4859 tried to escape combat! (12.791s left) | In combat with: [.Seikenyxx] | World:world, X:349.90, Y:91.00, Z:-361.64
+[2026/09/24 19:32:08] nesfety tried to escape combat! (25.710s left) | In combat with: [bedMonster872754] | World:world, X:1218.10, Y:-50.00, Z:-2690.26

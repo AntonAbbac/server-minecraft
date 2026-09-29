@@ -1,0 +1,64 @@
+# Item identifier.
+# Supports vanilla Minecraft materials and custom items.
+#
+# Formats:
+# - <material>               (Vanilla Minecraft)
+# - nexo:<id>                (Nexo)
+# - ia:<id>                  (ItemsAdder)
+# - mmoitems:<category>:<id> (MMOItems)
+# - oraxen:<id>              (Oraxen)
+# - ce:<id>                  (CraftEngine)
+# - mm:<id>                  (MythicMobs)
+#
+# Examples:
+# - STONE
+# - DIAMOND_SWORD
+# - nexo:ruby
+# - ia:magic_ingot
+# - mmoitems:SWORD:LONG_SWORD
+# - oraxen:amethyst_hammer
+# - ce:topaz
+# - mm:BanditTunic
+items:
+  - COMPASS
+  - NETHERITE_PICKAXE
+  - STONE_AXE
+  - WOODEN_SHOVEL
+  - FISHING_ROD
+  - CARROT_ON_A_STICK
+  - NETHERITE_HOE
+  - GOLDEN_AXE
+  - SHEARS
+  - IRON_AXE
+  - GOLDEN_PICKAXE
+  - DIAMOND_HOE
+  - BRUSH
+  - GOLDEN_SHOVEL
+  - STONE_HOE
+  - NETHERITE_AXE
+  - WOODEN_HOE
+  - STONE_SHOVEL
+  - GOLDEN_HOE
+  - IRON_HOE
+  - SPYGLASS
+  - IRON_SHOVEL
+  - DIAMOND_PICKAXE
+  - STONE_PICKAXE
+  - IRON_PICKAXE
+  - DIAMOND_SHOVEL
+  - NAME_TAG
+  - WOODEN_PICKAXE
+  - WARPED_FUNGUS_ON_A_STICK
+  - WOODEN_AXE
+  - RECOVERY_COMPASS
+  - WRITABLE_BOOK
+  - FLINT_AND_STEEL
+  - NETHERITE_SHOVEL
+  - CLOCK
+  - MAP
+  - LEAD
+  - DIAMOND_AXE
+  - COPPER_PICKAXE
+  - COPPER_AXE
+  - COPPER_SHOVEL
+  - COPPER_HOE

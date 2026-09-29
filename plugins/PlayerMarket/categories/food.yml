@@ -1,0 +1,67 @@
+# Item identifier.
+# Supports vanilla Minecraft materials and custom items.
+#
+# Formats:
+# - <material>               (Vanilla Minecraft)
+# - nexo:<id>                (Nexo)
+# - ia:<id>                  (ItemsAdder)
+# - mmoitems:<category>:<id> (MMOItems)
+# - oraxen:<id>              (Oraxen)
+# - ce:<id>                  (CraftEngine)
+# - mm:<id>                  (MythicMobs)
+#
+# Examples:
+# - STONE
+# - DIAMOND_SWORD
+# - nexo:ruby
+# - ia:magic_ingot
+# - mmoitems:SWORD:LONG_SWORD
+# - oraxen:amethyst_hammer
+# - ce:topaz
+# - mm:BanditTunic
+items:
+  - ROTTEN_FLESH
+  - APPLE
+  - BAKED_POTATO
+  - GOLDEN_APPLE
+  - ENCHANTED_GOLDEN_APPLE
+  - SPIDER_EYE
+  - GLOW_BERRIES
+  - CARROT
+  - TROPICAL_FISH
+  - LINGERING_POTION
+  - BREAD
+  - BEETROOT_SOUP
+  - CHICKEN
+  - POTION
+  - COD
+  - MELON_SLICE
+  - POISONOUS_POTATO
+  - SUSPICIOUS_STEW
+  - PUFFERFISH
+  - HONEY_BOTTLE
+  - RABBIT_STEW
+  - POTATO
+  - GOLDEN_CARROT
+  - COOKED_CHICKEN
+  - PORKCHOP
+  - CAKE
+  - SPLASH_POTION
+  - COOKED_PORKCHOP
+  - COOKED_COD
+  - MILK_BUCKET
+  - COOKED_BEEF
+  - SWEET_BERRIES
+  - BEETROOT
+  - COOKED_RABBIT
+  - MUSHROOM_STEW
+  - COOKIE
+  - CHORUS_FRUIT
+  - SALMON
+  - COOKED_SALMON
+  - RABBIT
+  - DRIED_KELP
+  - BEEF
+  - MUTTON
+  - COOKED_MUTTON
+  - PUMPKIN_PIE

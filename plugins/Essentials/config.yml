@@ -1,0 +1,305 @@
+ops-name-color: "4"
+nickname-prefix: "~"
+max-nick-length: 16
+allowed-nicks-regex: "^[a-zA-Z_0-9§]+$"
+nick-blacklist:
+ignore-colors-in-max-nick-length: false
+reset-nick-on-name-change: false
+hide-displayname-in-vanish: true
+change-displayname: true
+change-tab-complete-name: false
+teleport-safety: true
+force-disable-teleport-safety: false
+force-safe-teleport-location: false
+is-water-safe: true
+teleport-passenger-dismount: true
+teleport-cooldown: 5
+teleport-delay: 3
+teleport-invulnerability: 3
+teleport-to-center: true
+heal-cooldown: 60
+remove-effects-on-heal: true
+near-radius: 100
+item-spawn-blacklist:
+permission-based-item-spawn: false
+spawnmob-limit: 10
+warn-on-smite: true
+drop-items-if-full: true
+notify-no-new-mail: true
+notify-player-of-mail-cooldown: 60
+overridden-commands:
+disabled-commands:
+verbose-command-usages: false
+socialspy-commands:
+  - action
+  - describe
+  - eaction
+  - edescribe
+  - email
+  - eme
+  - emsg
+  - er
+  - ereply
+  - etell
+  - ewhisper
+  - m
+  - mail
+  - msg
+  - pm
+  - r
+  - reply
+  - t
+  - tell
+  - w
+  - whisper
+socialspy-listen-muted-players: true
+socialspy-messages: true
+socialspy-uses-displaynames: true
+world-change-fly-reset: true
+world-change-preserve-flying: true
+gamemode-change-preserve-flying: false
+world-change-speed-reset: true
+mute-commands:
+  - f
+  - team
+  - msg
+  - tell
+  - w
+  - r
+use-bukkit-permissions: true
+skip-used-one-time-kits-from-kit-list: false
+kit-auto-equip: true
+pastebin-createkit: false
+use-nbt-serialization-in-createkit: true
+enabledSigns:
+  - color
+  - balance
+  - buy
+  - sell
+  - trade
+  - free
+  - disposal
+  - warp
+sign-use-per-second: 4
+allow-old-id-signs: false
+unprotected-sign-names:
+backup:
+  interval: 0
+  always-run: false
+per-warp-permission: false
+list:
+  Admins: owner admin
+real-names-on-list: false
+debug: false
+locale: pt
+per-player-locale: false
+message-colors:
+  primary: "#ffaa00"
+  secondary: "#ff5555"
+remove-god-on-disconnect: true
+auto-afk: 300
+auto-afk-timeout: 600
+afk-timeout-commands:
+  - kick {USERNAME} Você foi expulso por ausência.
+freeze-afk-players: false
+disable-item-pickup-while-afk: true
+cancel-afk-on-interact: true
+cancel-afk-on-move: false
+cancel-afk-on-chat: true
+cancel-afk-on-fish: true
+sleep-ignores-afk-players: true
+sleep-ignores-vanished-player: true
+afk-list-name: "none"
+broadcast-afk-message: true
+death-messages: true
+vanishing-items-policy: keep
+binding-items-policy: keep
+send-info-after-death: true
+allow-silent-join-quit: false
+custom-join-message: "&e{PLAYER} &7entrou no servidor."
+custom-quit-message: "&e{PLAYER} &7saiu do servidor."
+custom-new-username-message: "none"
+use-custom-server-full-message: true
+use-custom-whitelist-message: true
+hide-join-quit-messages-above: -1
+no-god-in-worlds:
+world-teleport-permissions: false
+default-stack-size: -1
+oversized-stacksize: 64
+repair-enchanted: true
+unsafe-enchantments: false
+tree-command-range-limit: 300
+register-back-in-listener: true
+login-attack-delay: 5
+max-walk-speed: 0.8
+max-fly-speed: 0.8
+mails-per-minute: 30
+max-mute-time: -1
+max-tempban-time: -1
+last-message-reply-recipient: true
+last-message-reply-recipient-timeout: 180
+last-message-reply-vanished: false
+milk-bucket-easter-egg: false
+send-fly-enable-on-join: true
+world-time-permissions: false
+command-cooldowns:
+  feed: 60
+  heal: 120
+command-cooldown-persistence: true
+npcs-in-balance-ranking: false
+allow-bulk-buy-sell: true
+allow-selling-named-items: false
+delay-motd: 0
+default-enabled-confirm-commands:
+  - pay
+  - clearinventory
+teleport-when-freed: back
+jail-online-time: false
+tpa-accept-cancellation: 120
+tpa-max-requests: 5
+allow-direct-hat: true
+allow-world-in-broadcastworld: true
+safe-usermap-names: true
+log-command-block-commands: false
+log-console-commands: false
+max-projectile-speed: 8
+max-itemlore-lines: 10
+update-check: false
+
+sethome-multiple:
+  default: 3
+  vip: 5
+  staff: 10
+compass-towards-home-perm: false
+spawn-if-no-home: true
+confirm-home-overwrite: true
+
+starting-balance: 100
+command-costs:
+currency-symbol: "F"
+currency-symbol-suffix: false
+max-money: 10000000000000
+min-money: 0
+economy-log-enabled: true
+economy-log-uuids: true
+economy-log-update-enabled: false
+minimum-pay-amount: 0.01
+pay-excludes-ignore-list: true
+show-zero-baltop: false
+baltop-requirements:
+  minimum-balance: 1
+  minimum-playtime: 0
+baltop-entry-limit: 100
+sell-multipliers:
+  default: 1.0
+  vip: 1.5
+
+non-ess-in-help: true
+hide-permissionless-help: true
+
+chat:
+  radius: 0
+  format: "&7[{GROUP}] &f{DISPLAYNAME}&7: &f{MESSAGE}"
+  group-formats:
+  world-aliases:
+  shout-default: false
+  persist-shout: false
+  question-enabled: true
+  paper-chat-events: true
+
+protect:
+  prevent:
+    lava-flow: false
+    water-flow: false
+    water-bucket-flow: false
+    fire-spread: true
+    lava-fire-spread: true
+    lava-itemdamage: false
+    flint-fire: false
+    lightning-fire-spread: true
+    portal-creation: false
+    tnt-explosion: false
+    tnt-playerdamage: false
+    tnt-itemdamage: false
+    tnt-minecart-explosion: false
+    tnt-minecart-playerdamage: false
+    tnt-minecart-itemdamage: false
+    fireball-explosion: false
+    fireball-fire: false
+    fireball-playerdamage: false
+    fireball-itemdamage: false
+    windcharge-explosion: false
+    witherskull-explosion: false
+    witherskull-playerdamage: false
+    witherskull-itemdamage: false
+    wither-spawnexplosion: false
+    wither-blockreplace: false
+    creeper-explosion: false
+    creeper-playerdamage: false
+    creeper-itemdamage: false
+    creeper-blockdamage: false
+    ender-crystal-explosion: false
+    enderdragon-blockdamage: true
+    enderman-pickup: true
+    villager-death: false
+    bed-explosion: false
+    respawn-anchor-explosion: false
+    entitytarget: false
+    zombie-door-break: false
+    ravager-thief: false
+    sheep-eat-grass: false
+    transformation:
+      charged-creeper: false
+      zombie-villager: false
+      villager: false
+      witch: false
+      zombie-pigman: false
+      drowned: false
+      mooshroom: false
+    spawn:
+  creeper:
+    max-height: -1
+  disable:
+    fall: false
+    pvp: false
+    drown: false
+    suffocate: false
+    lavadmg: false
+    projectiles: false
+    contactdmg: false
+    firedmg: false
+    lightning: false
+    wither: false
+    weather:
+      storm: false
+      thunder: false
+      lightning: false
+
+    build: true
+    use: true
+    warn-on-build-disallow: true
+  alert:
+    on-placement: LAVA,TNT,LAVA_BUCKET
+    on-use: LAVA_BUCKET
+    on-break:
+  blacklist:
+    placement:
+    usage:
+    break:
+    piston:
+    dispenser:
+
+newbies:
+  announce-format: "&a&lNEW &7» &fBem-vindo ao servidor Arena, &e{DISPLAYNAME}&f!"
+  spawnpoint: newbies
+  kit: tools
+
+respawn-listener-priority: high
+spawn-join-listener-priority: high
+respawn-at-home: true
+respawn-at-home-bed: true
+respawn-at-anchor: true
+random-spawn-location: "none"
+random-respawn-location: "none"
+spawn-on-join: false
+override-unsupported-api-version: true

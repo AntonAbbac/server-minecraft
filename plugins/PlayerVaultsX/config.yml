@@ -1,0 +1,13 @@
+messages:
+  opening: "<green>Abrindo baú #{number}</green>"
+  no-permission: "<red>Você não tem baús disponíveis</red>"
+  usage: "<yellow>Uso: /pv {number}</yellow>"
+  invalid-number: "<red>Por favor, insira um número válido</red>"
+  vault-title: "<dark_gray>Baú #{number}</dark_gray>"
+
+  admin-vault-title: "<dark_gray>[Admin] Baú #{number} de {player}</dark_gray>"
+  admin-no-permission: "<red>Você não tem permissão para ver os baús de outros jogadores</red>"
+  admin-player-not-found: "<red>Jogador {player} não encontrado</red>"
+  admin-opening-view: "<yellow>Visualizando o baú #{number} de {player} (apenas leitura)</yellow>"
+  admin-opening-edit: "<yellow>Editando o baú #{number} de {player}</yellow>"
+  admin-vault-readonly: "<red>Este baú é apenas para leitura!</red>"

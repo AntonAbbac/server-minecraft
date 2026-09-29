@@ -1,0 +1,165 @@
+language: en
+storageType: YAML
+
+database:
+  host: localhost
+  port: 3306
+  database: spigot
+  user: root
+  password: password
+  additionalOptions:
+    - 'useSSL=false'
+  tablePrefix: BetterTeams_
+
+prefix: tag
+prefixFormat: '&7[%betterteams_tag%&7] '
+
+announceTeamJoin: true
+announceTeamLeave: true
+announceTeamDisband: true
+
+chatPrefixes:
+  globalToTeam: '!'
+  globalToAlly: '?'
+  teamOrAllyToGlobal: '!'
+
+allyLimit: 2
+maxTeamLength: 12
+minTeamLength: 2
+maxTagLength: 5
+maxTitleLength: 10
+
+disableCombat: true
+disablePotions: false
+playerDamageSelf: true
+
+blacklist:
+  - 'admin'
+  - 'staff'
+
+bannedChars: ',.!"$%^&*()[]{};:#~\|`'
+allowedChars: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+
+moneyDecimalPlaces: 2
+useShortMoney: true
+bannedColors: ''
+
+helpCommandColor: 'b'
+helpDescriptionColor: '7'
+maxHologramLines: 10
+fullyCustomHelpMessages: false
+
+useVault: true
+logTeamChat: true
+allowToggleTeamChat: true
+colorTeamName: true
+defaultColor: 6
+
+noTeleport: false
+tpDelay: 3
+noMove: true
+maxMove: 0
+
+anchor:
+  enable: true
+  checkAnchoredPlayer: true
+  checkUsePermission: false
+  ignoreObsidianAnchorRespawn: true
+  ignoreBedRespawn: false
+  priority: HIGH
+
+singleOwner: true
+enforceTag: true
+allowPassword: false
+allowAllyChests: false
+invite: 60
+
+command:
+  team: [ ]
+  teama:
+    - teama
+
+levels:
+  l1:
+    teamLimit: 4
+    maxChests: 1
+    maxWarps: 1
+    maxBal: 50000
+    maxAdmins: 1
+    maxOwners: 1
+    rankLore:
+      - '&7Nível inicial do time'
+  l2:
+    price: 10000m
+    teamLimit: 6
+    maxChests: 2
+    maxWarps: 2
+    maxBal: 150000
+    maxAdmins: 2
+    maxOwners: 1
+    rankLore:
+      - '&7Aumenta limite de membros e baús'
+  l3:
+    price: 50000m
+    teamLimit: 8
+    maxChests: 3
+    maxWarps: 3
+    maxBal: 500000
+    maxAdmins: 2
+    maxOwners: 1
+    rankLore:
+      - '&7Nível máximo de equipe'
+
+permissionLevels: false
+
+titleRemoval: true
+onAllyMessageChannel:
+  - CHAT
+onNeutralMessageChannel:
+  - CHAT
+
+purgeCommands: []
+enableAutoPurge: false
+autoPurge: []
+
+spamThreshold: 30
+
+events:
+  death:
+    score: -1
+    spam: 0
+  kill:
+    score: 2
+    spam: 0
+
+minScore: 0
+
+useTeams: true
+displayTeamName: prefix
+collide: true
+privateDeath: false
+privateName: false
+canSeeFriendlyInvisibles: true
+
+zkoth:
+  pointsPerCapture: 5
+
+ultimateClaims:
+  enabled: false
+
+apollo:
+  teamview:
+    enabled: false
+
+worldGuard:
+  enabled: true
+
+luckperms:
+  enabled: true
+
+extension:
+  enableTick: 1
+
+checkUpdates: false
+rebuildLookups: false
+invalidateCacheSeconds: 60

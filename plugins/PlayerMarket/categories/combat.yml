@@ -1,0 +1,46 @@
+# Item identifier.
+# Supports vanilla Minecraft materials and custom items.
+#
+# Formats:
+# - <material>               (Vanilla Minecraft)
+# - nexo:<id>                (Nexo)
+# - ia:<id>                  (ItemsAdder)
+# - mmoitems:<category>:<id> (MMOItems)
+# - oraxen:<id>              (Oraxen)
+# - ce:<id>                  (CraftEngine)
+# - mm:<id>                  (MythicMobs)
+#
+# Examples:
+# - STONE
+# - DIAMOND_SWORD
+# - nexo:ruby
+# - ia:magic_ingot
+# - mmoitems:SWORD:LONG_SWORD
+# - oraxen:amethyst_hammer
+# - ce:topaz
+# - mm:BanditTunic
+items:
+  - WOODEN_SWORD
+  - TURTLE_HELMET
+  - DIAMOND_SWORD
+  - NETHERITE_SWORD
+  - TRIDENT
+  - SHIELD
+  - TOTEM_OF_UNDYING
+  - ARROW
+  - TNT
+  - GOLDEN_SWORD
+  - BOW
+  - END_CRYSTAL
+  - IRON_SWORD
+  - SPECTRAL_ARROW
+  - TIPPED_ARROW
+  - STONE_SWORD
+  - CROSSBOW
+  - MACE
+  - WOODEN_SPEAR
+  - STONE_SPEAR
+  - IRON_SPEAR
+  - GOLDEN_SPEAR
+  - DIAMOND_SPEAR
+  - NETHERITE_SPEAR

@@ -1,0 +1,642 @@
+invalidArg: '&cUso incorreto do comando. Use &f/team help'
+inTeam: '&cVoce ja esta em uma equipe.'
+internalError: '&cOcorreu um erro interno. Tente novamente.'
+notInTeam: '&cVoce precisa ter uma equipe para fazer isso.'
+needOwner: '&cApenas o dono da equipe pode fazer isso.'
+needAdmin: '&cApenas administradores da equipe podem fazer isso.'
+needPlayer: '&cApenas jogadores podem executar este comando.'
+noPlayer: '&cJogador nao encontrado.'
+notTeam: '&cEquipe nao encontrada.'
+needSameTeam: '&cEsse jogador nao pertence a sua equipe.'
+noPerm: '&cVoce nao tem permissao para isso.'
+prefixSyntax: '&7[{0}&7] &r{1}'
+bannedChar: '&cSua mensagem contem caracteres proibidos.'
+noTeam: '&cEquipe inexistente.'
+loading: '&eCarregando...'
+cooldown:
+  wait: '&cAguarde &f{0}s &cpara usar este comando novamente.'
+cost:
+  tooPoor: '&cVoce nao possui dinheiro suficiente. Custo: &a${0}'
+  run: '&c-${0}'
+placeholder:
+  noTeam: ''
+  noMeta: ''
+  noDescription: ''
+  money: '{0}'
+  owner: Dono
+  admin: Admin
+  default: Membro
+  name: '{0}'
+  tag: '{0}'
+  displayname: '{0}'
+  inteam: 'true'
+  notinteam: 'false'
+  noTitle: ''
+  hasHome: 'true'
+  noHome: 'false'
+  teamChat: Chat Equipe
+  globalChat: Chat Global
+  allyChat: Chat Alianca
+prefix:
+  owner: ' **'
+  admin: ' *'
+  default: ' '
+create:
+  exists: '&cUma equipe com esse nome ja existe.'
+  success: '&aEquipe &f{0} &acriada com sucesso!'
+  banned: '&cEsse nome de equipe e proibido.'
+  maxLength: '&cO nome da equipe e muito longo.'
+  minLength: '&cO nome da equipe e muito curto.'
+leave:
+  success: '&aVoce saiu da equipe.'
+  lastOwner: '&cVoce e o unico dono. Promova alguem ou use &f/team disband'
+announce:
+  join: '&7&o{0} entrou para a equipe.'
+  leave: '&7&o{0} saiu da equipe.'
+  disband: '&c&oA equipe {0} foi desfeita.'
+rank:
+  noTeam: '&cEquipe nao encontrada.'
+  info: '&7Posicao no ranking:'
+  infos: '&7Nivel da equipe: &f{0} &7(Faltam &f{1} &7pontos)'
+  infom: '&7Nivel da equipe: &f{0} &7(Faltam &a${1}&7)'
+  infomm: '&7Nivel da equipe: &f{0} &7(Nivel Maximo)'
+  syntax: '&f{0}: &7{1}'
+  perks:
+    header: '&e&lBeneficios do Proximo Nivel:'
+    warps: '&7- &a+{0} &7Warps'
+    members: '&7- &a+{0} &7Vagas de Membros'
+    chests: '&7- &a+{0} &7Baus Protegidos'
+    bank: '&7- &aLimite do Banco: &e${0}'
+    admins: '&7- &a+{0} &7Admins'
+    owners: '&7- &a+{0} &7Donos'
+delhome:
+  success: '&aHome da equipe removida.'
+  noHome: '&cA sua equipe nao possui uma home definida.'
+disband:
+  success: '&cA equipe foi desfeita.'
+  warning: '&cIsso apagara o banco e os baus protegidos da equipe!'
+  confirm: '&cDigite &f/team disband &cnovamente para confirmar.'
+description:
+  success: '&aDescricao atualizada.'
+  view: '&7Descricao: &f{0}'
+  noDesc: '&7Nenhuma descricao definida.'
+  noPerm: '&cVoce nao pode editar a descricao.'
+name:
+  success: '&aNome da equipe alterado com sucesso.'
+  view: '&7Nome: &f{0}'
+  exists: '&cJa existe uma equipe com esse nome.'
+  noPerm: '&cVoce nao pode alterar o nome da equipe.'
+invite:
+  success: '&aConvite enviado para &f{0}&a.'
+  invite: '&aVoce foi convidado para a equipe &f{0}&a. Use &f/team join {0}'
+  hover: '&aClique para entrar em &f{0}'
+  inTeam: '&cEsse jogador ja possui uma equipe.'
+  banned: '&cEsse jogador esta banido da sua equipe.'
+  full: '&cA equipe atingiu o limite de membros.'
+  expired: '&cO convite de &f{0} &cexpirou.'
+join:
+  success: '&aVoce entrou na equipe!'
+  notify: '&aBem-vindo a equipe, &f{0}&a!'
+  notInvited: '&cVoce nao possui um convite desta equipe.'
+  banned: '&cVoce esta banido desta equipe.'
+  full: '&cA equipe esta cheia.'
+open:
+  successopen: '&aSua equipe agora esta aberta para todos.'
+  successclose: '&aSua equipe agora e apenas por convite.'
+title:
+  change: '&aSeu titulo foi alterado para &f{0}&a.'
+  remove: '&aSeu titulo foi removido.'
+  success: '&aTitulo alterado com sucesso.'
+  tooLong: '&cTitulo muito longo.'
+  noFormat: '&cVoce nao pode usar formatacoes no titulo.'
+  noColor: '&cVoce nao pode usar cores no titulo.'
+  reset: '&aTitulo resetado.'
+  noPerm: '&cVoce nao pode alterar titulos.'
+info:
+  needTeam: '&cEquipe ou jogador nao encontrado.'
+  name: '&7Nome: &f{0}'
+  description: '&7Descricao: &f{0}'
+  open: '&7Aberta: &f{0}'
+  level: '&7Nivel: &f{0}'
+  owner: '&7Dono(s): &f{0}'
+  admin: '&7Admin(s): &f{0}'
+  default: '&7Membros: &f{0}'
+  tag: '&7Tag: &f{0}'
+  anchor: '&7Ancora: &f{0}'
+  fail: '&cNenhum registro encontrado.'
+  score: '&7Pontos: &f{0}'
+  money: '&7Banco: &a${0}'
+  ally: '&7Aliados: &f{0}'
+  online: '&a'
+  offline: '&c'
+  onlinePlayer: '&a{0}'
+  offlinePlayer: '&c{0}'
+  playerListSpace: ', '
+  limits: '&7Membros: &f{0}/{1} &7| Warps: &f{2}/{3}'
+kick:
+  success: '&aJogador expulso com sucesso.'
+  notify: '&cVoce foi expulso da equipe &f{0}&c.'
+  title: '&cVoce foi expulso da equipe'
+  noPerm: '&cVoce nao pode expulsar este jogador.'
+ban:
+  success: '&aJogador banido da equipe.'
+  notify: '&cVoce foi banido da equipe &f{0}&c.'
+  title: '&cVoce foi banido da equipe'
+  noPerm: '&cVoce nao pode banir este jogador.'
+  already: '&cEsse jogador ja esta banido.'
+unban:
+  success: '&aJogador desbanido.'
+  notify: '&aVoce foi desbanido da equipe &f{0}&a.'
+  noPerm: '&cVoce nao pode desbanir este jogador.'
+  not: '&cEsse jogador nao esta banido.'
+promote:
+  success: '&aJogador promovido.'
+  noPerm: '&cVoce nao pode promover este jogador.'
+  max: '&cEste jogador ja possui o cargo maximo.'
+  notify: '&aVoce foi promovido dentro da equipe!'
+  maxAdmins: '&cLimite de administradores atingido.'
+  maxOwners: '&cLimite de donos atingido.'
+demote:
+  success: '&aJogador rebaixado.'
+  noPerm: '&cVoce nao pode rebaixar este jogador.'
+  min: '&cEste jogador ja esta no cargo mais baixo.'
+  notify: '&cVoce foi rebaixado dentro da equipe.'
+  lastOwner: '&cVoce nao pode rebaixar o unico dono.'
+  maxAdmins: '&cLimite de administradores atingido.'
+home:
+  success: '&aTeleportado para a Home da equipe.'
+  noHome: '&cSua equipe nao possui uma Home definida.'
+  world: '&cO mundo da Home nao esta acessivel.'
+sethome:
+  success: '&aHome da equipe definida com sucesso.'
+  noPerm: '&cVoce nao tem permissao para definir a Home.'
+anchor:
+  enabled: '&aRessurgimento na Home ativado.'
+  disabled: '&cRessurgimento na Home desativado.'
+  noHome: '&cA equipe precisa ter uma Home definida primeiro.'
+setanchor:
+  enabled: '&aAncora ativada.'
+  disabled: '&cAncora desativada.'
+  notifyEnable: '&aAncora ativada por &f{0}&a.'
+  notifyDisable: '&cAncora desativada por &f{0}&c.'
+  noHome: '&cDefina a Home da equipe antes.'
+  noPerm: '&cSem permissao para alterar a ancora.'
+  noBool: '&cUse apenas true ou false.'
+chat:
+  enabled: '&aChat direcionado para: &fEquipe'
+  disabled: '&aChat direcionado para: &fGlobal'
+  syntax: '&8[&bEquipe&8] &f{0}&7: &f{1}'
+color:
+  success: '&aCor da equipe alterada.'
+  fail: '&cCor invalida.'
+  banned: '&cEssa cor nao e permitida.'
+deposit:
+  tooLittle: '&cO valor deve ser positivo.'
+  fail: '&cFalha ao depositar.'
+  success: '&aValor depositado no banco da equipe.'
+  max: '&cAtingiu o limite do banco da equipe.'
+withdraw:
+  tooLittle: '&cO valor deve ser positivo.'
+  fail: '&cFalha ao retirar.'
+  success: '&aValor retirado do banco da equipe.'
+  notEnough: '&cSua equipe nao possui esse saldo.'
+ally:
+  already: '&cSuas equipes ja sao aliadas.'
+  success: '&aAlianca estabelecida!'
+  ally: '&aSua equipe agora e aliada de &f{0}&a.'
+  ally_title: '&aNova Alianca'
+  requested: '&aSolicitacao de alianca enviada.'
+  request: '&f{0} &aenviou um pedido de alianca. Use &f/team ally <equipe>'
+  self: '&cVoce nao pode se aliar a sua propria equipe.'
+  from: '&7Pedidos de alianca pendentes: &f{0}'
+  noRequests: '&cSem pedidos de alianca no momento.'
+  onJoin: '&7Existem solicitacoes de alianca pendentes.'
+  limit: '&cAtingiu o limite maximo de aliados.'
+  alreadyrequest: '&cPedido de alianca ja enviado.'
+allychat:
+  disabled: '&aChat direcionado para: &fGlobal'
+  enabled: '&aChat direcionado para: &fAliados'
+  syntax: '&8[&dAliados&8] &f{0}&7: &f{1}'
+neutral:
+  self: '&cEsta e sua propria equipe.'
+  requestremove: '&cPedido de alianca removido.'
+  reject: '&cPedido de alianca recusado por &f{0}&c.'
+  notAlly: '&cVoce nao e aliado desta equipe.'
+  success: '&aAlianca desfeita.'
+  remove: '&cAlianca terminada com &f{0}&c.'
+  remove_title: '&cAlianca Encerrada'
+list:
+  noPage: '&cPagina nao encontrada.'
+  header: '&7--- &bLista de Equipes (Pag {0}) &7---'
+  body: '&f{0}: &7{1} membros'
+  footer: '&7--- Use &f/team list <pagina> &7---'
+setowner:
+  use: '&cUse &f/team setowner <jogador> &cpara transferir a posse.'
+  success: '&aPosse transferida com sucesso.'
+  notify: '&aVoce agora e o dono da equipe!'
+  max: '&cEste jogador ja e o dono.'
+setwarp:
+  exist: '&cJa existe uma warp com esse nome.'
+  max: '&cLimite de warps atingido.'
+  success: '&aWarp da equipe criada.'
+  char: '&cNome de warp invalido.'
+warp:
+  nowarp: '&cWarp nao encontrada.'
+  invalidPassword: '&cSenha incorreta.'
+  success: '&aTeleportado para a warp.'
+  world: '&cMundo inacessivel.'
+warps:
+  syntax: '&7Warps da equipe: &f{0}'
+  none: '&cSua equipe nao possui warps.'
+delwarp:
+  success: '&aWarp removida com sucesso.'
+teleport:
+  fail: '&cO teleporte falhou.'
+  wait: '&7Aguarde &f{0}s &7sem se mover para teleportar...'
+  bypass: '&aTeleporte instantaneo!'
+  noTeleport: '&7Localizacao: Mundo &f{0} &7em &f{1}, {2}, {3}'
+chest:
+  claim:
+    noChest: '&cVoce precisa estar olhando ou sobre um bau.'
+    limit: '&cLimite de baus protegidos atingido.'
+    claimed: '&cEste bau ja pertence a outra equipe.'
+    success: '&aBau protegido com sucesso.'
+  remove:
+    noChest: '&cVoce nao esta em um bau.'
+    notClaimed: '&cEste bau nao pertence a sua equipe.'
+    success: '&aProtecao do bau removida.'
+  all:
+    success: '&aTodas as protecoes de bau foram removidas.'
+  claimed: '&cBau protegido por &f{0}'
+  check:
+    self: '&aEste bau pertence a sua equipe.'
+    notClaimed: '&7Este bau nao tem dono.'
+    claimed: '&cEste bau pertence a &f{0}'
+echest:
+  echest: Bau do Fim
+pvp:
+  enabled: '&aPvP entre membros &ativado&a.'
+  disabled: '&cPvP entre membros &cdesativado&c.'
+rankup:
+  max: '&cA equipe ja atingiu o nivel maximo.'
+  score: '&cFaltam &f{0} &cpontos para subir de nivel.'
+  money: '&cFaltam &a${0} &cno banco da equipe para subir de nivel.'
+  success: '&aA equipe subiu de nivel!'
+tag:
+  banned: '&cTag nao permitida.'
+  success: '&aTag da equipe alterada.'
+  maxLength: '&cTag muito longa.'
+  noPerm: '&cSem permissao para alterar a tag.'
+admin:
+  cancel: '&cAcao cancelada por outro plugin.'
+  tag:
+    success: '&aTag alterada via admin.'
+  setrank:
+    success: '&aNivel da equipe alterado.'
+    'no': '&cNivel invalido.'
+  config:
+    reload: '&aConfiguracao do BetterTeams recarregada.'
+  holo:
+    create:
+      success: '&aHolograma criado.'
+    remove:
+      noHolo: '&cNenhum holograma encontrado.'
+      success: '&aHolograma removido.'
+  title:
+    success: '&aTitulo do jogador alterado.'
+    reset: '&aTitulo do jogador resetado.'
+  version: '&7Versao: &f{0}'
+  versionstorage: '&7Armazenamento: &f{0}'
+  versionversion: '&7Versao MC: &f{0}'
+  versionlanguage: '&7Idioma: &f{0}'
+  versiononline: '&7Modo Online: &f{0}'
+  versionplayers: '&7Jogadores: &f{0}'
+  versionplugins: '&7Integracoes: &f{0}'
+  versionconflicts: '&7Conflitos: &f{0}'
+  versionnoconflicts: nenhum
+  versionextensions: '&7Extensoes: {0}'
+  versionnomanager: '&cNao carregado'
+  versionnoextensions: '&eNenhuma'
+  noTeam: '&cEquipe nao encontrada.'
+  home:
+    success: '&aTeleportado para a Home da equipe.'
+    noHome: '&cA equipe nao tem Home.'
+  anchor:
+    enabled: '&aAncora forcada.'
+    disabled: '&cAncora desativada via admin.'
+  setanchor:
+    enabled: '&aStatus da ancora atualizado.'
+    disabled: '&aStatus da ancora atualizado.'
+    noHome: '&cA equipe precisa de uma Home.'
+  name:
+    success: '&aNome alterado via admin.'
+  description:
+    success: '&aDescricao alterada via admin.'
+  open:
+    successopen: '&aEquipe aberta via admin.'
+    successclose: '&aEquipe fechada via admin.'
+  invite:
+    success: '&aJogador convidado via admin.'
+  create:
+    success: '&aEquipe criada via admin.'
+  join:
+    banned: '&cJogador banido da equipe.'
+    success: '&aJogador adicionado a equipe.'
+    notify: '&aVoce foi adicionado a equipe &f{0}&a.'
+    full: '&cA equipe esta cheia.'
+  notInTeam: '&cJogador ja tem equipe.'
+  inTeam: '&cJogador nao tem equipe.'
+  leave:
+    success: '&aJogador removido da equipe.'
+    notify: '&cVoce foi removido da equipe.'
+  demote:
+    notify: '&cVoce foi rebaixado.'
+    success: '&aJogador rebaixado.'
+    min: '&cJogador ja esta no cargo minimo.'
+    maxAdmins: '&cLimite de admins atingido.'
+  promote:
+    max: '&cJogador ja esta no cargo maximo.'
+    notify: '&aVoce foi promovido.'
+    success: '&aJogador promovido.'
+    owner: '&cApenas um dono e permitido.'
+    maxAdmins: '&cLimite de admins atingido.'
+    maxOwners: '&cLimite de donos atingido.'
+  setowner:
+    already: '&cJogador ja e dono.'
+    nonotify: '&cVoce nao e mais o dono.'
+    success: '&aNovo dono definido.'
+    notify: '&aVoce agora e o dono da equipe!'
+  warps:
+    none: '&cA equipe nao possui warps.'
+  setwarp:
+    success: '&aWarp definida via admin.'
+    max: '&cA equipe atingiu o limite de warps.'
+  purge:
+    confirm: '&cExecute novamente em 10s para confirmar o PURGE de pontos.'
+    success: '&aPontos de todas as equipes resetados.'
+  score:
+    tooSmall: '&cO valor deve ser maior que 0.'
+    success: '&aPontuacao alterada.'
+  bal:
+    toSmall: '&cO valor deve ser maior que 0.'
+    success: '&aSaldo alterado.'
+  update: '&cAviso: Nova versao do BetterTeams disponivel.'
+  disband:
+    success: '&aEquipe desfeita via admin.'
+  color:
+    success: '&aCor alterada via admin.'
+  chest:
+    claim:
+      success: '&aBau protegido via admin.'
+    remove:
+      success: '&aProtecao removida via admin.'
+      notClaimed: '&cNenhum time possui este bau.'
+    all:
+      success: '&aTodas protecoes removidas.'
+    disable:
+      already: '&cProtecoes ja desativadas.'
+      success: '&aProtecao de baus desativada globalmente.'
+    disabled:
+      bc: '&c&lTodos os baus do servidor estao desbloqueados!'
+    enable:
+      already: '&cProtecoes ja ativadas.'
+      success: '&aProtecao de baus ativada globalmente.'
+    enabled:
+      bc: '&a&lTodos os baus protegidos foram trancados!'
+  teleport:
+    noWorld: '&cMundo nao encontrado.'
+    success: '&aMembros teleportados.'
+    player:
+      success: '&aJogador teleportado.'
+    all:
+      success: '&aTodos os jogadores teleportados.'
+      home:
+        success: '&aTodos jogadores teleportados para suas Homes.'
+  ally:
+    same: '&cA equipe nao pode se aliar a si mesma.'
+    already: '&cJa sao aliadas.'
+    success: '&aAlianca forcada via admin.'
+  neutral:
+    same: '&cMesma equipe.'
+    not: '&cNao sao aliadas.'
+    success: '&aAlianca desfeita via admin.'
+  import:
+    fail: '&cFalha ao importar mensagens.'
+    success: '&aMensagens importadas.'
+  meta:
+    get:
+      noMetaData: '&cSem metadados.'
+      allMetaData: '&aMetadados: &e{0}'
+      specificMetaData: '&aChave "&e{0}&a": "&e{1}&a"'
+      noexist: '&cChave nao existe.'
+    set:
+      needsValue: '&cInsira um valor.'
+      success: '&aMetadado definido.'
+    remove:
+      success: '&aMetadado removido.'
+nametag:
+  syntax: '&8[&f{0}&8] '
+holo:
+  leaderboard: '&e&lRanking de Equipes'
+  syntax: '&f{0}: &7{1} pts'
+  msyntax: '&f{0}: &a${1}'
+top:
+  leaderboard: '&e&lRanking de Equipes'
+  syntax: '&f{0}: &7{1} pts'
+  divide: '&7...'
+baltop:
+  leaderboard: '&e&lEquipes Mais Ricas'
+  syntax: '&f{0}: &a${1}'
+  divide: '&7...'
+spy:
+  stop: '&cModo espiao desativado.'
+  start: '&aModo espiao ativado.'
+  team: '&8[&bEspiao-Time&8] &f{0}: &7{1}'
+  ally: '&8[&dEspiao-Aliados&8] &f{0}: &7{1}'
+uclaim:
+  team: '&cVoce precisa de uma equipe para reivindicar.'
+  member: '&cVoce nao pode sair da reivindicacao da sua equipe.'
+  kick: '&cVoce nao pode expulsar membros da equipe da area.'
+  ban: '&cVoce nao pode banir membros da equipe da area.'
+  dissolve: '&cA equipe foi desfeita e a area liberada.'
+help:
+  header: '&7--- &bAjuda do BetterTeams &7---'
+  footer: '&7--- Pagina {0}/{1} ---'
+  wrong: '&cOcorreu um erro.'
+  description: Altera a descricao da equipe
+  ban: Bane um jogador da sua equipe
+  home: Teleporta para a Home da equipe
+  help: Mostra os comandos de ajuda
+  promote: Promove um membro
+  demote: Rebaixa um membro
+  unban: Desbane um jogador da equipe
+  kick: Expulsa um jogador da equipe
+  leave: Sai da equipe atual
+  chat: Alterna para o chat da equipe
+  name: Altera o nome da equipe
+  sethome: Define a Home da equipe
+  create: Cria uma nova equipe
+  invite: Convida um jogador
+  disband: Desfaz a equipe
+  open: Alterna se a equipe e aberta ou fechada
+  info: Exibe informacoes de uma equipe
+  color: Altera a cor da equipe
+  deposit: Deposita dinheiro no banco da equipe
+  bal: Exibe o saldo do banco da equipe
+  withdraw: Retira dinheiro do banco da equipe
+  title: Altera o titulo de um membro
+  top: Exibe as melhores equipes
+  rank: Exibe o nivel atual da equipe
+  join: Entra em uma equipe
+  delhome: Remove a Home da equipe
+  ally: Solicita alianca com outra equipe
+  neutral: Rompe uma alianca
+  allychat: Alterna para o chat de aliados
+  anchor: Ativa ou Desativa nascimento na Home
+  setanchor: Define se a Home funciona como ancora
+  echest: Abre o Bau do Fim compartilhado
+  setwarp: Define uma warp de equipe
+  teamadmin:
+    echest: View and edit that teams ender chest
+    leave: Force a player to leave a team
+    join: Force a player to join a team
+    ally: Set two teams to be allies of each other
+    color: Change that teams color
+    score: ''
+    title: Change a players title to the specified title
+helpArg:
+  delhome: ''
+  echest: ''
+  color: <codigo_cor>
+  allychat: '[mensagem]'
+  description: '[descricao]'
+  setwarp: <nome> [senha]
+  title: '[jogador] [titulo]'
+  bal: ''
+  ban: <jogador>
+  promote: <jogador>
+  warps: ''
+  top: ''
+  ally: <equipe>
+  rankup: ''
+  leave: ''
+  sethome: ''
+  create: <nome> <tag>
+  rank: '[equipe]'
+  join: <equipe>
+  tag: '[tag]'
+  disband: ''
+  info: '[equipe/jogador]'
+  delwarp: <nome>
+  chest: ''
+  neutral: <equipe>
+  pvp: ''
+  baltop: ''
+  list: '[pagina]'
+  home: ''
+  help: '[pagina]'
+  unban: <jogador>
+  demote: <jogador>
+  kick: <jogador>
+  chat: '[mensagem]'
+  name: <nome>
+  deposit: <quantia>
+  invite: <jogador>
+  open: ''
+  warp: <nome>
+  withdraw: <quantia>
+  anchor: ''
+  setanchor: <true/false>
+  teamadmin:
+    echest: <team>
+    leave: <player>
+    join: <team> <player>
+    ally: <team1> <team2>
+    color: <team> <color code>
+    score: ''
+    title: <player> <title>
+command:
+  create: criar
+  leave: sair
+  disband: desfazer
+  description: descricao
+  invite: convidar
+  join: entrar
+  name: nome
+  open: abrir
+  info: info
+  kick: expulsar
+  promote: promover
+  demote: rebaixar
+  home: home
+  sethome: sethome
+  ban: banir
+  unban: desbanir
+  chat: c
+  color: cor
+  title: titulo
+  top: top
+  baltop: baltop
+  rank: nivel
+  delhome: delhome
+  ally: aliar
+  neutral: rival
+  allychat: ac
+  list: lista
+  warp: warp
+  setwarp: setwarp
+  delwarp: delwarp
+  warps: warps
+  echest: echest
+  rankup: evoluir
+  tag: tag
+  pvp: pvp
+  claim: proteger
+  remove: desproteger
+  removeall: desprotegertudo
+  chest: bau
+  reload: recarregar
+  chatspy: espiao
+  version: versao
+  purge: purge
+  setrank: definirnivel
+  add: adicionar
+  set: definir
+  score: pontos
+  enableclaims: ativarprotecoes
+  disableclaims: desativarprotecoes
+  anchor: ancora
+  setanchor: definirancora
+  check: checar
+  debug: debug
+  teleport: tp
+  importmessages: importarmensagens
+  money: dinheiro
+  meta: meta
+  get: ver
+  deposit: depositar
+  bal: saldo
+  withdraw: sacar
+  setowner: definirdono
+  banlist: lista-ban
+
+webhook:
+  unknownPlayer: jogador desconhecido
+  create:
+    title: Nova equipe criada - {0}
+    description: Equipe {0} criada por {1}
+  disband:
+    title: Equipe desfeita - {0}
+    description: Equipe {0} desfeita por {1}
+  leave:
+    title: Membro saiu - {0}
+    description: '{0} saiu da equipe {1}'
+  rename:
+    title: Nome alterado - {0}
+    description: Equipe {0} renomeada para {1} por {2}
+  chat:
+    title: 'Chat da Equipe: {0} [{1}]'
+    description: '{0}'
+  allychat:
+    title: 'Chat de Aliados: {0} [{1}]'
+    description: '{0}'

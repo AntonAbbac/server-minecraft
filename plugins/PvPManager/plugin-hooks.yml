@@ -1,0 +1,15 @@
+Plugin Hooks:
+  Essentials:
+    Protect AFK: true
+  Kingdoms:
+    No Protection In War: true
+  SimpleClans:
+    No Protection In War: true
+  Towny:
+    No Protection In War: true
+    Pushback on Peaceful: false
+  HuskTowns:
+    No Protection In War: true
+  TAB:
+    Show In Tab: true
+    Show Above Player: true

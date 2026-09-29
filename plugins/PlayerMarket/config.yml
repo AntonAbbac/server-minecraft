@@ -1,0 +1,704 @@
+#-----------------------------------------------------------------------------------------------#
+#     _____  _          __      ________ _____    __  __          _____  _  ________ _______    #
+#    |  __ \| |        /\\ \   / /  ____|  __ \  |  \/  |   /\   |  __ \| |/ /  ____|__   __|   #
+#    | |__) | |       /  \\ \_/ /| |__  | |__) | | \  / |  /  \  | |__) | ' /| |__     | |      #
+#    |  ___/| |      / /\ \\   / |  __| |  _  /  | |\/| | / /\ \ |  _  /|  < |  __|    | |      #
+#    | |    | |____ / ____ \| |  | |____| | \ \  | |  | |/ ____ \| | \ \| . \| |____   | |      #
+#    |_|    |______/_/    \_\_|  |______|_|  \_\ |_|  |_/_/    \_\_|  \_\_|\_\______|  |_|      #
+#                                                                                               #
+#-----------------------------------------------------------------------------------------------#
+
+# PlayerMarket by Norbit4
+
+# github: https://github.com/Norbit4
+# modrinth: https://modrinth.com/user/norbit
+# spigot: https://www.spigotmc.org/resources/authors/norbittech.392197/
+# builtbybit: https://builtbybit.com/creators/n0rbit.98575/
+
+# If you like the plugin, support me with a positive opinion <3
+
+# Need support?
+# wiki: https://github.com/Norbit4/PlayerMarket
+# Join to discord: https://discord.com/invite/DPXqQcDDTs
+
+#---------------------------------------#
+#              [ config ]               #
+#---------------------------------------#
+
+# HEX CODES SUPPORTED
+# &<code> ex. &#ff5733
+# https://htmlcolorcodes.com/
+
+# advanced logs
+debug: false
+
+#---------------------------------------#
+#             [ DATABASE ]              #
+#---------------------------------------#
+# mysql/h2
+database:
+  type: 'h2'
+  database: 'playermarket'
+  host: 'jdbc:mysql://localhost:3306'
+  user: 'root'
+  password: 'password'
+  use-ssl: false
+
+#---------------------------------------#
+#             [ COMMANDS ]              #
+#---------------------------------------#
+
+# /playermarket - help command
+# /playermarket reload - reload plugin
+# /playermarket clear <player> - clear player data
+
+main-command:
+  # permission: playermarket.command.main.clear
+  clear:
+    success: '&7Data for &e{PLAYER} &7has been cleared!'
+    player-not-found: '&cPlayer not found!'
+  # permission: playermarket.command.main.help
+  help:
+    info:
+      - '&8--------------- &a&lPLAYERMARKET &8---------------'
+      - ''
+      - '&7&l» &8&l/&amarket &7- &fOpen the market!'
+      - '&7&l» &8&l/&aoffer [cost] &7- &fOffer an item!'
+  # permission: playermarket.command.main.reload
+  reload:
+    success: '&aPlugin has been reloaded!'
+    # display in help when player has permission
+    info:
+      - '&7&l» &8&l/&aplayermarket reload &7- &fReload files!'
+      - '&7&l» &8&l/&aplayermarket clear [player] &7- &fClear player data!'
+      - ''
+
+# /offer <price> - offer an item
+offer-command:
+  # Requires a server restart after changing this value.
+  prefix: 'offer'
+  argument-name: 'price'
+  use-permission:
+    enabled: false
+    permission: 'playermarket.command.offer'
+  usage: '&cUsage: /offer [price]'
+  wrong-price: '&cThe price variable is invalid!'
+  wrong-item: '&cYou can not offer this item!'
+  success: '&aYou have successfully offered this item!'
+
+# /market - open market
+market-command:
+  # Requires a server restart after changing this value.
+  prefix: 'market'
+  use-permission:
+    enabled: false
+    permission: 'playermarket.command.market'
+
+#---------------------------------------#
+#              [ GLOBAL ]               #
+#---------------------------------------#
+
+# Plugin support economy:
+#  Vault - https://www.spigotmc.org/resources/vault.34315/
+#  PlayerPoints - https://www.spigotmc.org/resources/playerpoints.80745/
+
+# Economy configuration
+# type:
+#  - Vault -> uses a Vault economy from server plugins
+#  - PlayerPoints -> uses PlayerPoints plugin
+economy:
+  type: 'Vault'
+
+expire:
+  # expire time in minutes
+  # 0 - never expire
+  time: 10080 # 7 days
+  status: '&cExpired!'
+  never: '&dNever'
+  message: '&cThis offer has expired!'
+  prefix:
+    days: 'd'
+    hours: 'h'
+    minutes: 'm'
+    # seconds show up when expiration time is less than an hour
+    seconds: 's'
+
+# tax system, tax will be taken from the seller
+tax:
+  # tax in percent
+  enabled: false
+  # tax value must be between 0 and 1
+  # 0.15 = 15%
+  value: 0.15
+  # tax command executed when player buy item, {PRICE} - tax money value
+  command:
+    enabled: false
+    execute: 'eco give Norbit4 {PRICE}' # example: add tax money to a server owner
+
+blacklist:
+  # Item identifier.
+  # Supports vanilla Minecraft materials and custom items.
+  #
+  # Formats:
+  # - <material>               (Vanilla Minecraft)
+  # - nexo:<id>                (Nexo)
+  # - ia:<id>                  (ItemsAdder)
+  # - mmoitems:<category>:<id> (MMOItems)
+  # - oraxen:<id>              (Oraxen)
+  # - ce:<id>                  (CraftEngine)
+  # - mm:<id>                  (MythicMobs)
+  #
+  # Examples:
+  # - STONE
+  # - DIAMOND_SWORD
+  # - nexo:ruby
+  # - ia:magic_ingot
+  # - mmoitems:SWORD:LONG_SWORD
+  # - oraxen:amethyst_hammer
+  # - ce:topaz
+  # - mm:BanditTunic
+
+  # if enabled, players will not be able to offer items from this list
+  enabled: false
+  message: '&cYou can not offer this item!'
+  # items in blacklist, you can use item ids or names
+  items:
+    - 'DIAMOND_SWORD' # example of item id
+    - 'test item' # example of item name
+
+offers-limit:
+  enabled: true
+  default-limit: 4
+  # usage:
+  # ex. 'playermarket.offers.limit.15' => 15 offers
+  permission: 'playermarket.offers.limit'
+  limit-message: '&cYou have reached maximum amount of active offers!'
+
+cooldown:
+  # Cooldown for commands and some GUI icons (in milliseconds, recommended: 400–500)
+  # This value helps protect the system from excessive spam.
+  # Significantly lowering this value is strongly discouraged.
+  time: 400
+  # Maximum number of clicks allowed per second in GUI (recommended: 5–7)
+  #  This value helps protect the GUI from spam clicking.
+  #  Significantly increasing this value is strongly discouraged.
+  clicks-per-second: 7
+
+# {DATE} - item offer date
+# {PRICE} - item price
+# {SELLER} - item seller
+# {EXPIRE} - item expire time
+market-offer-item-lore:
+  - '&8{DATE}'
+  - ''
+  - '&fPrice: &a{PRICE}$'
+  - '&fSeller: &a{SELLER}'
+  - '&fExpire: &a{EXPIRE}'
+  - ''
+  - '&#dcee9aClick to buy!'
+
+# Icon for not empty shulker box
+market-offer-shulker-lore:
+  - '&8{DATE}'
+  - ''
+  - '&fPrice: &a{PRICE}$'
+  - '&fSeller: &a{SELLER}'
+  - '&fExpire: &a{EXPIRE}'
+  - ''
+  - '&#dcee9a[LPM] Click to buy!'
+  - '&#dcee9a[PPM] Click to preview!'
+
+# {DATE} - item offer date
+# {PRICE} - item price
+# {EXPIRE} - item expire time
+player-offer-item-lore:
+  - '&8{DATE}'
+  - ''
+  - '&fPrice: &a{PRICE}$'
+  - '&fExpire: &a{EXPIRE}'
+  - ''
+  - '&#dcee9aClick to delete!'
+
+player-offer-shulker-lore:
+  - '&8{DATE}'
+  - ''
+  - '&fPrice: &a{PRICE}$'
+  - '&fExpire: &a{EXPIRE}'
+  - ''
+  - '&#dcee9a[LPM] Click to delete!'
+  - '&#dcee9a[PPM] Click to preview!'
+
+#---------------------------------------#
+#               [ INFO ]                #
+#---------------------------------------#
+info-messages:
+  cooldown: '&cSlow down! You need wait a moment!'
+  join: '&7You have &a{MONEY}$ &7to collect for &a{SOLD} &7sold items &a/market'
+
+#---------------------------------------#
+#             [ DISCORD ]               #
+#---------------------------------------#
+# Discord Webhook Logs
+discord:
+  enabled: false
+  webhook-url: ''
+  messages:
+    # {PLAYER} - player name
+    # {ITEM} - item material
+    # {PRICE} - item price
+    # {SELLER} - item seller
+    buy:
+      enabled: true
+      color: 65280 # GREEN
+      message: 'Player **{PLAYER}** bought **{ITEM}** for **{PRICE}$** from **{SELLER}**'
+    offer:
+      enabled: true
+      color: 16776960 # YELLOW
+      message: 'Player **{SELLER}** offered **{ITEM}** for **{PRICE}$**'
+
+#---------------------------------------#
+#            [ MARKET - GUI ]           #
+#---------------------------------------#
+
+# Item identifier.
+# Supports vanilla Minecraft materials and custom items.
+#
+# Formats:
+# - <material>               (Vanilla Minecraft)
+# - nexo:<id>                (Nexo)
+# - ia:<id>                  (ItemsAdder)
+# - mmoitems:<category>:<id> (MMOItems)
+# - oraxen:<id>              (Oraxen)
+# - ce:<id>                  (CraftEngine)
+# - mm:<id>                  (MythicMobs)
+#
+# Examples:
+# - STONE
+# - DIAMOND_SWORD
+# - nexo:ruby
+# - ia:magic_ingot
+# - mmoitems:SWORD:LONG_SWORD
+# - oraxen:amethyst_hammer
+# - ce:topaz
+# - mm:BanditTunic
+market-gui:
+  title: '&8&lMARKET &7&l» &8&l{CATEGORY} ({CURRENT}/{TOTAL})'
+  fill: false # if true, all empty slots will be filled with border icons, ignores border layout
+  size: 6 # in rows
+  border-icon:
+    name: ' '
+    icon: 'GRAY_STAINED_GLASS_PANE'
+    lore: []
+  your-offers-icon:
+    name: '&#93f182&lYOUR OFFERS'
+    icon: 'CHEST'
+    slot: 49
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  search-icon:
+    name: '&#93f182&lSEARCH'
+    icon: 'NAME_TAG'
+    slot: 51
+    enabled: true
+    lore:
+      - ''
+      - '&7Type item name...'
+      - ''
+      - '&#dcee9aClick to search!'
+  previous-page-icon:
+    name: '&f&lPREVIOUS PAGE'
+    icon: 'ARROW'
+    slot: 46
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  next-page-icon:
+    name: '&f&lNEXT PAGE'
+    icon: 'ARROW'
+    slot: 52
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  layout:
+    border:
+      - 1
+      - 10
+      - 19
+      - 28
+      - 37
+      - 7
+      - 16
+      - 25
+      - 34
+      - 43
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+    items:
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+    categories:
+      - 0
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+
+#---------------------------------------#
+#       [ ANVIL- INPUT - SEARCH ]       #
+#---------------------------------------#
+anvil-input:
+  title: '&8&lTYPE ITEM'
+  empty: 'Empty!'
+
+#---------------------------------------#
+#            [ SEARCH - GUI ]           #
+#---------------------------------------#
+search-gui:
+  title: '&8&lSEARCH &7&l» &8&l{SEARCH} ({CURRENT}/{TOTAL})'
+  size: 6 # in rows
+  fill: false # if true, all empty slots will be filled with border icons, ignores border layout
+  border-icon:
+    name: ' '
+    icon: 'GRAY_STAINED_GLASS_PANE'
+    lore: []
+  back-to-market-icon:
+    name: '&#93f182&lBACK TO MARKET'
+    icon: 'BARRIER'
+    slot: 49
+    lore:
+      - ''
+      - '&#dcee9aClick to go back!'
+  previous-page-icon:
+    name: '&f&lPREVIOUS PAGE'
+    icon: 'ARROW'
+    slot: 45
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  next-page-icon:
+    name: '&f&lNEXT PAGE'
+    icon: 'ARROW'
+    slot: 53
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  layout:
+    border:
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+    items:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+
+#---------------------------------------#
+#            [ OFFERS - GUI ]           #
+#---------------------------------------#
+offers-gui:
+  title: '&8&lYOUR OFFERS'
+  size: 6 # in rows
+  fill: false # if true, all empty slots will be filled with border icons, ignores border layout
+  remove-offer-message: '&cYour offer has been removed!'
+  nothing-to-get-message: '&cYou have nothing to claim!'
+  inventory-full-message: '&cYour inventory is full!'
+  success-message: '&aYou have successfully received &2{MONEY}$ &afor your sold offers!'
+  border-icon:
+    name: ' '
+    icon: 'GRAY_STAINED_GLASS_PANE'
+    lore: []
+  statistics-icon:
+    name: '&#93f182&lYOUR ACCOUNT'
+    icon: 'CHEST'
+    slot: 4
+    lore:
+      # {OFFERS} - player offers
+      # {OFFERS_LIMIT} - player offers limit
+      # {MONEY_EARNED} - player money earned
+      # {ALL_SOLD} - all time player sold items
+      # {ALL_MONEY_EARNED} - all time player money earned
+      - ''
+      - '&b◆ &fOffers: &b{OFFERS}&8/&b{OFFERS_LIMIT}'
+      - '&d◆ &fSold offers: &d{SOLD}'
+      - '&a$ &fMoney to claim: &a{MONEY_EARNED}$'
+      - ''
+      - '&d◆ &fAll time sold offers: &d{ALL_SOLD}'
+      - '&a$ &fAll time money earned: &a{ALL_MONEY_EARNED}$'
+      - ''
+      - '&#dcee9aClick to claim!'
+  back-to-market-icon:
+    name: '&#93f182&lBACK TO MARKET'
+    icon: 'BARRIER'
+    slot: 49
+    lore:
+      - ''
+      - '&#dcee9aClick to go back!'
+  previous-page-icon:
+    name: '&f&lPREVIOUS PAGE'
+    icon: 'ARROW'
+    slot: 46
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  next-page-icon:
+    name: '&f&lNEXT PAGE'
+    icon: 'ARROW'
+    slot: 52
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  layout:
+    border:
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+    items:
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+
+#---------------------------------------#
+#            [ BUY - GUI ]              #
+#---------------------------------------#
+buy-gui:
+  title: '&8&lBUY AN ITEM'
+  size: 4 # in rows
+  fill: false # if true, all empty slots will be filled with border icons, ignores border layout
+  item-sold-message: '&cThis offer is already sold!'
+  not-enough-money-message: '&cYou do not have enough money!'
+  player-is-owner-message: '&cYou can not buy your own item!'
+  success-message: '&fYou have bought an item for &a{COST}$!'
+  sell-item-to-owner: '&7Player &a{PLAYER} &7bought your item for &a{PRICE}$!'
+  inventory-full-message: '&cYour inventory is full!'
+  buy-icon:
+    slot: 13
+    lore:
+      - '&8{DATE}'
+      - ''
+      - '&fPrice: &a{PRICE}$'
+      - '&fSeller: &a{SELLER}'
+      - '&fExpire: &a{EXPIRE}'
+  border-icon:
+    name: ' '
+    icon: 'GRAY_STAINED_GLASS_PANE'
+    lore: []
+  accept-icon:
+    name: '&f&lBuy for &a&l{AMOUNT}$!'
+    icon: 'GREEN_WOOL'
+    slot: 20
+    lore:
+      - ''
+      - '&#dcee9aClick to buy!'
+  cancel-icon:
+    name: '&c&lBack'
+    icon: 'RED_WOOL'
+    slot: 24
+    lore:
+      - ''
+      - '&#dcee9aClick to go back!'
+
+#---------------------------------------#
+#         [ SHULKERBOX - GUI ]          #
+#---------------------------------------#
+# shulker box gui, opens when player click shulker box for preview
+
+shulker-gui:
+  title: '&8&lITEM PREVIEW'
+  fill: false # if true, all empty slots will be filled with border icons, ignores border layout
+  item-sold-message: '&cThis offer is already sold!'
+  border-icon:
+    name: ' '
+    icon: 'GRAY_STAINED_GLASS_PANE'
+    lore: []
+  back-icon:
+    name: '&#93f182&lBACK'
+    icon: 'BARRIER'
+    slot: 40
+    lore:
+      - ''
+      - '&#dcee9aClick to go back!'
+  buy-icon:
+    name: '&#93f182&lBUY'
+    icon: 'GREEN_WOOL'
+    slot: 36
+    lore:
+      - ''
+      - '&#dcee9aClick to buy!'
+
+#---------------------------------------#
+#            [ CATEGORIES ]             #
+#---------------------------------------#
+category-name-format: '&#93f182&l{CATEGORY}'
+category-selected-lore:
+  - ''
+  - '&a&lSelected!'
+
+# all items without category will go to this category
+other-category:
+  # if disabled, all items without category will be not available to buy in shop
+  enabled: true
+  name: "OTHER"
+  icon: "ENDER_PEARL"
+  lore:
+    - ''
+    - '&#dcee9aClick to browse!'
+
+# main page category, all items will be displayed here
+all-category:
+  enabled: true
+  name: "MAIN"
+  icon: "NETHER_STAR"
+  lore:
+    - ''
+    - '&#dcee9aClick to browse!'
+    -
+
+# categories, you can add more categories
+# file is the name of the file /categories/{file}.yml
+categories:
+  1:
+    name: 'BLOCKS'
+    icon: 'BRICKS'
+    file: 'blocks'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  2:
+    name: 'ARMOR'
+    icon: 'DIAMOND_CHESTPLATE'
+    file: 'armor'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  3:
+    name: 'COMBAT'
+    icon: 'GOLDEN_SWORD'
+    file: 'combat'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  4:
+    name: 'MINERALS'
+    icon: 'AMETHYST_SHARD'
+    file: 'minerals'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  5:
+    name: 'NATURE'
+    icon: 'BAMBOO'
+    file: 'nature'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  6:
+    name: 'REDSTONE'
+    icon: 'REDSTONE'
+    file: 'redstone'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  7:
+    name: 'TOOLS'
+    icon: 'IRON_PICKAXE'
+    file: 'tools'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'
+  8:
+    name: 'FOOD'
+    icon: 'ENCHANTED_GOLDEN_APPLE'
+    file: 'food'
+    lore:
+      - ''
+      - '&#dcee9aClick to browse!'

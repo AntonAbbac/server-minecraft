@@ -1,0 +1,22 @@
+key-file-name: key.pem
+username-prefix: "bed"
+replace-spaces: true
+
+disconnect:
+  invalid-key: Por favor, conecte-se usando o Geyser oficial.
+  invalid-arguments-length: Argumentos invalidos (esperava {}, recebeu {}). O Geyser esta atualizado?
+
+player-link:
+  enabled: true
+  require-link: false
+  enable-own-linking: false
+  allowed: true
+  link-code-timeout: 300
+  type: sqlite
+  enable-global-linking: true
+
+metrics:
+  enabled: true
+  uuid: 86837a4d-059c-4dc1-9248-e323e3700567
+
+config-version: 3

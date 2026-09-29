@@ -1,0 +1,9 @@
+&f
+&6&l  ARENA SURVIVAL &7| &fSeja bem-vindo, &e{DISPLAYNAME}&f!
+&7  ──────────────────────────────────────────
+&f  ▸ Servidor de &aSobrevivência &fe &cPvP[span_2](start_span)[span_2](end_span)
+&f  ▸ Seu saldo atual: &aF{BALANCE}
+&f  ▸ Jogadores online: &a{ONLINE}&f/&a{MAXPLAYERS}
+&7  ──────────────────────────────────────────
+&f  Uso útil: &e/help&f, &e/home&f, &e/tpa&f, &e/spawn
+&f

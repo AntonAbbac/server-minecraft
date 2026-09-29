@@ -1,0 +1,21 @@
+kits:
+  tools:
+    delay: 86400
+    items:
+      - STONE_SWORD 1
+      - STONE_PICKAXE 1
+      - STONE_AXE 1
+      - STONE_SHOVEL 1
+      - COOKED_BEEF 32
+      - CHAINMAIL_CHESTPLATE 1
+  pvp:
+    delay: 3600
+    items:
+      - IRON_SWORD 1
+      - IRON_HELMET 1
+      - IRON_CHESTPLATE 1
+      - IRON_LEGGINGS 1
+      - IRON_BOOTS 1
+      - SHIELD 1
+      - GOLDEN_APPLE 4
+      - COOKED_BEEF 16
